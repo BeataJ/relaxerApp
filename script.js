@@ -8,13 +8,15 @@ const holdTime = totalTime / 5;
 breathAnimation();
 
 function breathAnimation() {
-  console.log('Breathe In!');
+  text.innerText = 'Breathe In!';
 
   setTimeout(() => {
-    console.log('Hold');
+    text.innerText = 'Hold';
 
     setTimeout(() => {
-      console.log('Breathe Out');
+      text.innerText = 'Breathe Out';
     }, holdTime);
   }, breatheTime);
 }
+
+setInterval(breathAnimation, totalTime);
